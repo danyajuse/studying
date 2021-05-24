@@ -1,0 +1,16 @@
+$mainFont: 'Rubik-Medium', sans-serif;
+$contentFont: 'DM Sans-Medium', sans-serif;
+
+$headerCol: #436372;
+$mainCol: #fcd7b6;
+$mainColOp: #fef7f0;
+$footerCol: #7b7b7b;
+$defBtn: #a3bbc8;
+
+%iconCircle {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  border-radius: 50%;
+}
