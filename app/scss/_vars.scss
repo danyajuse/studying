@@ -1,16 +1,48 @@
-$mainFont: 'Rubik-Medium', sans-serif;
-$contentFont: 'DM Sans-Medium', sans-serif;
+$rubikFont: "Rubik", sans-serif;
+$dmFont: "DM Sans", sans-serif;
+$popFont: "Poppins", sans-serif;
 
-$headerCol: #436372;
-$mainCol: #fcd7b6;
-$mainColOp: #fef7f0;
-$footerCol: #7b7b7b;
-$defBtn: #a3bbc8;
+$orange-300: #fcd7b6;
+$orange-200: #fef7f0;
+$orange-50: #f3eee8;
 
-%iconCircle {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  border: none;
-  border-radius: 50%;
+$black-400: #000000;
+$black-300: #191919;
+
+$gray-650: #373737;
+$gray-600: #414141;
+$gray-500: #585858;
+$gray-450: #8b8b8b;
+$gray-400: #a7b4bb;
+$gray-350: #7b7b7b;
+$gray-300: #a3bbc8;
+$gray-150: #dae4e9;
+$gray-100: #edf1f4;
+$gray-50: #f9f9f9;
+
+$blue-800: #436372;
+$blue-600: #243f4d;
+$blue-500: #234969;
+
+$white-400: #ffffff;
+
+@mixin line-clamp($lines) {
+  display: -webkit-box;
+  -webkit-line-clamp: $lines;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+@mixin overflow($width) {
+  max-width: $width;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+@function max($numbers...) {
+  @return m#{a}x(#{$numbers});
+}
+@function mix($numbers...) {
+  @return m#{i}x(#{$numbers});
 }

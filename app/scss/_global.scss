@@ -1,25 +1,20 @@
 body {
-  font-family: $mainFont;
-  font-size: 16px;
+  font-family: $rubikFont;
+  font-size: 14px;
   font-weight: 400;
   line-height: 0.8;
   letter-spacing: normal;
-}
-
-button {
-  cursor: pointer;
+  background-color: #ffffff;
 }
 
 .container {
   max-width: 1800px;
   padding: 0 15px;
   margin: 0 auto;
-}
 
-.wrapper {
-  max-width: 1200px;
-  padding: 0 15px;
-  margin: 0 auto;
+  &--sm {
+    max-width: 1200px;
+  }
 }
 
 .sr-only {
@@ -36,23 +31,27 @@ button {
 }
 
 .title {
-  font-family: $contentFont;
+  font-family: $dmFont;
+  text-align: center;
   font-size: 36px;
   font-weight: 700;
   line-height: normal;
   color: #191919;
-  text-align: center;
+  @include overflow(1200px);
 }
 
 .button {
   border: none;
-  background-color: $defBtn;
+  background-color: $gray-300;
   color: #ffffff;
   transition: background-color 0.5s ease, color 0.5s ease;
 }
 
-.button-active:active {
-  box-shadow: 0 0 5px $headerCol;
+.icon-circle {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  border-radius: 50%;
 }
-
 
