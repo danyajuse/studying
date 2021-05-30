@@ -9,6 +9,10 @@ $(function() {
     arrows: false,
   });
 
+  $('.partners__slider').slick({
+    dots: false,
+    arrows: false,
+  });
 
   const mixin1 = document.querySelector('.weak-products__items');
   const mixin2 = document.querySelector('.design-products__items');

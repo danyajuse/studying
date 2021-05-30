@@ -831,12 +831,15 @@
   max-width: 1920px;
   margin-bottom: 95px;
 
-  &__list {
-    display: flex;
+  &__slider { 
     padding-top: 175px;
+  }
+
+  &__elements {
+    display: flex;
     align-items: center;
     justify-content: space-around;
-    height: 437px;
+    height: 260px;
   }
 }
 
