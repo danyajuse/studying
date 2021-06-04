@@ -1,0 +1,28 @@
+.weak-products {
+  padding-top: 65px;
+  font-family: $dmFont;
+  font-size: 16px;
+
+  &__title {
+    margin-bottom: 22px;
+  }
+
+  &__items {
+    display: flex;
+    flex-wrap: wrap;
+    margin: -15px;
+
+    @include r(1200) {
+      justify-content: center;
+    }
+
+    @include r(576) {
+      margin: 0;
+    }
+  }
+
+  &__item {
+    margin: 15px;
+    box-shadow: 0px 0px 35px 5px $gray-100;
+  }
+}

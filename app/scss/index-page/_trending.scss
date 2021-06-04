@@ -1,0 +1,266 @@
+.trending {
+  padding-top: 145px;
+
+  @include r(1536) {
+    padding-top: 110px;
+  }
+
+  @include r(1200) {
+    padding-top: 90px;
+  }
+
+  @include r(576) {
+    padding-top: 55px;
+  }
+
+  &__item {
+    background-color: $orange-300;
+  }
+
+  &__inner {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 76vh;
+    min-height: 580px;
+    
+
+    @include r(1200) {
+      height: 47vh;
+    }
+
+    @include r(576) {
+      flex-direction: column;
+    }
+  }
+
+  &__descr {
+    max-width: 430px;
+    margin-right: 100px;
+    padding-bottom: 65px;
+
+    @include r(1536) {
+      margin-right: 0;
+    }
+
+    @include r(1200) {
+      max-width: 390px;
+      padding-bottom: 45px;
+    }
+
+    @include r(992) {
+      max-width: 360px;
+    }
+
+    @include r(768) {
+      padding-left: 10px;
+      max-width: 230px;
+    }
+
+    @include r(576) {
+      max-width: 240px;
+    }
+  }
+
+  &__title {
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    font-size: 72px;
+    font-weight: 500;
+    line-height: 1;
+    color: $blue-600;
+    @include line-clamp(3);
+
+    @include r(1536) {
+      font-size: 65px;
+    }
+
+    @include r(992) {
+      font-size: 57px;
+    }
+
+    @include r(768) {
+      font-size: 54px;
+    }
+
+    @include r(576) {
+      font-size: 40px;
+    }
+  }
+
+  &__text {
+    max-width: 375px;
+    margin-bottom: 40px;
+    font-size: 18px;
+    line-height: 1.6;
+    color: $blue-800;
+    @include line-clamp(3);
+
+    @include r(1536) {
+      font-size: 17px;
+    }
+
+    @include r(1200) {
+      max-width: 335px;
+    }
+
+    @include r(768) {
+      font-size: 16px;
+    }
+  }
+
+  &__wrapper {
+    max-width: 635px;
+    position: relative;
+    z-index: 1;
+
+    @include r(1536) {
+      max-width: 530px;
+    }
+
+    @include r(1200) {
+      max-width: 500px;
+    }
+
+    @include r(992) {
+      max-width: 350px;
+    }
+
+    @include r(576) {
+      max-width: 265px;
+    }
+
+    &::after {
+      content: "";
+      position: absolute;
+      z-index: -1;
+      right: -18%;
+      bottom: -74%;
+      width: 642px;
+      height: 642px;
+      border-radius: 50%;
+      background-image: linear-gradient(90deg, #fff0, rgb(255, 255, 255) 100%);
+
+      @include r(1536) {
+        width: 530px;
+        height: 530px;
+      }
+
+      @include r(1200) {
+        right: -10px;
+        width: 480px;
+        height: 480px;
+      }
+
+      @include r(992) {
+        width: 400px;
+        height: 400px;
+      }
+
+      @include r(768) {
+        display: none;
+      }
+    }
+  }
+
+  &__button {
+    position: relative;
+    display: inline-block;
+    padding: 21px 101px 19px 25px;
+    border: none;
+    font-size: 15px;
+    font-weight: 500;
+
+    @include r(992) {
+      padding: 19px 80px 17px 19px;
+    }
+
+    @include r(768) {
+      padding: 16px 72px 15px 16px;
+    }
+
+    @include r(576) {
+      padding: 14px 57px 12px 12px;
+    }
+
+    &:hover {
+      background-color: $gray-150;
+      color: $blue-600;
+
+      svg {
+        fill: $blue-600;
+      }
+    }
+
+    &:focus {
+      outline: transparent;
+      box-shadow: 0 0 5px $blue-500;
+    }
+
+    &:active {
+      background-color: $gray-400;
+    }
+
+    svg {
+      position: absolute;
+      right: 18px;
+      top: 27px;
+      fill: $white-400;
+      transition: fill 0.5s ease;
+
+      @include r(992) {
+        top: 25px;
+      }
+
+      @include r(768) {
+        top: 22px;
+      }
+
+      @include r(576) {
+        top: 19px;
+      }
+    }
+  }
+
+  .slick-dots {
+    position: absolute;
+    left: 50%;
+    bottom: 46px;
+    transform: translateX(-50%);
+    display: flex;
+
+    @include r(576) {
+      bottom: 23px;
+    }
+
+    li:not(:last-child) {
+      margin-right: 10px;
+    }
+
+    .slick-active {
+      button {
+        background-color: $white-400;
+      }
+    }
+
+    button {
+      width: 30px;
+      height: 30px;
+      border-radius: 50%;
+      border: none;
+      font-size: 11px;
+      background-color: #fde3cc;
+      color: $blue-600;
+      transition: background-color 0.5s ease;
+
+      &:hover {
+        background-color: $white-400;
+      }
+
+      &:active {
+        box-shadow: 0 0 5px $blue-800;
+      }
+    }
+  }
+}

@@ -1,0 +1,36 @@
+
+.partners {
+  background-color: $orange-200;
+  margin-bottom: 90px;
+
+  @include r(768) {
+    margin-bottom: 65px;
+  }
+
+  &__slider {
+    display: flex;
+    align-items: center;
+    height: 436px;
+    padding-top: 190px;
+
+    @include r(992) {
+      height: 384px;
+      padding-top: 134px;
+    }
+
+    @include r(768) {
+      height: 350px;
+      padding-top: 125px;
+    }
+
+    @include r(576) {
+      height: 286px;
+      padding-top: 165px;
+    }
+  }
+
+  .slick-slide {
+    display: flex;
+    justify-content: space-around;
+  }
+}

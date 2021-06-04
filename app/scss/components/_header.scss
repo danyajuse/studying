@@ -1,0 +1,377 @@
+.header {
+  position: fixed;
+  z-index: 10;
+  left: 0;
+  right: 0;
+  padding: 47px 0 0;
+  font-size: 15px;
+  font-weight: 500;
+  color: $blue-800;
+  transition: background-color 0.7s, padding 0.7s;
+
+  @include r(1536) {
+    padding: 30px 0 0;
+  }
+
+  @include r(1200) {
+    padding: 25px 0 0;
+  }
+
+  @include r(576) {
+    padding: 10px 0 0;
+  }
+
+  &--active {
+    background-color: #e4ddd9;
+    padding: 15px 0 15px;
+
+    @include r(992) {
+      padding: 15px 0 8px;
+    }
+
+    @include r(576) {
+      padding: 5px 0 0px;
+    }
+  }
+}
+
+.menu {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  &__logo {
+    margin-right: 159px;
+    max-width: 170px;
+    max-height: 40px;
+    z-index: 5;
+
+    @include r(1536) {
+      max-width: 140px;
+      margin-right: 95px;
+    }
+
+    @include r(1200) {
+      margin-right: 15px;
+    }
+
+    @include r(992) {
+      position: absolute;
+      left: 53px;
+      max-width: 125px;
+      top: 4px;
+    }
+
+    @include r(576) {
+      top: 12px;
+      left: 32px;
+      max-width: 73px;
+    }
+  }
+
+  &__btn {
+    display: none;
+    height: 44px;
+
+    @include r(992) {
+      display: block;
+      z-index: 5;
+    }
+
+    @include r(576) {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    svg {
+      @include r(576) {
+        height: 30px;
+        width: 30px;
+      }
+    }
+  }
+
+  &__list {
+    display: flex;
+
+    @include r(992) {
+      position: absolute;
+      right: -25px;
+      left: -25px;
+      top: 0;
+      display: block;
+      padding: 75px 0 10px;
+      text-align: center;
+      background-color: $orange-200;
+      transform: translateY(-200%);
+      transition: transform 0.7s ease;
+
+      &.menu__list--active {
+        transform: translateY(-9%);
+      }
+      &.menu__list--active .menu__btn svg {
+        transform: rotate(90deg);
+      }
+    }
+  }
+
+  &__item {
+    &:not(:last-child) {
+      margin-right: 36px;
+
+      @include r(1200) {
+        margin-right: 25px;
+      }
+
+      @include r(992) {
+        margin-right: 0;
+      }
+    }
+  }
+
+  &__link {
+    transition: color 0.5s ease;
+
+    @include r(992) {
+      display: block;
+      padding: 8px 0;
+    }
+
+    &:hover {
+      color: $gray-300;
+    }
+
+    &:focus {
+      outline: 2px solid $blue-500;
+    }
+
+    &:active {
+      color: $blue-500;
+    }
+  }
+
+  &__inner {
+    display: flex;
+    align-items: center;
+    z-index: 5;
+
+    @include r(992) {
+    }
+  }
+
+  &__button {
+    width: 51px;
+    height: 51px;
+    background-color: $gray-100;
+    fill: $blue-600;
+    transition: background-color 0.5s ease;
+
+    @include r(1536) {
+      width: 47px;
+      height: 47px;
+    }
+
+    @include r(1200) {
+      width: 45px;
+      height: 45px;
+    }
+
+    @include r(576) {
+      width: 44px;
+      height: 44px;
+      background-color: transparent;
+    }
+
+    &:hover {
+      background-color: $gray-150;
+      fill: $white-400;
+
+      @include r(576) {
+        background-color: transparent;
+        fill: $blue-600;
+      }
+    }
+
+    &:focus {
+      outline: transparent;
+      box-shadow: 0 0 5px $blue-500;
+
+      @include r(576) {
+        box-shadow: none;
+        outline: 2px solid;
+      }
+    }
+
+    &:active {
+      background-color: $orange-200;
+      fill: $black-400;
+
+      @include r(576) {
+        background-color: transparent;
+      }
+    }
+
+    &:not(:last-child) {
+      margin-right: 20px;
+
+      @include r(1536) {
+        margin-right: 15px;
+      }
+
+      @include r(576) {
+        margin-right: 0;
+      }
+    }
+  }
+
+  &__icon {
+    position: relative;
+    display: inline-block;
+    background-color: $orange-300;
+    fill: $blue-600;
+    transition: background-color 0.5s ease, fill 0.5s ease;
+
+    @include r(576) {
+      width: 45px;
+      height: 45px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-color: transparent;
+    }
+
+    &:hover {
+      background-color: $gray-100;
+      fill: $black-400;
+
+      @include r(576) {
+        background-color: transparent;
+      }
+    }
+
+    &:focus {
+      outline: transparent;
+      box-shadow: 0 0 5px $blue-500;
+
+      @include r(576) {
+        box-shadow: none;
+        outline: 2px solid;
+      }
+    }
+
+    &:active {
+      background-color: $orange-300;
+      fill: $blue-800;
+
+      @include r(576) {
+        background-color: transparent;
+      }
+    }
+
+    &--heart {
+      border-radius: 25px 0px 0px 25px;
+      padding: 23px 30px 12px 40px;
+
+      @include r(1536) {
+        padding: 19px 26px 8px 36px;
+      }
+
+      @include r(1200) {
+        padding: 16px 23px 5px 33px;
+      }
+
+      @include r(576) {
+        padding: 0;
+      }
+
+      &::after {
+        content: "";
+        position: absolute;
+        right: -1px;
+        top: 10px;
+        z-index: 1;
+        height: 32px;
+        width: 1px;
+        background-color: $orange-200;
+
+        @include r(1200) {
+          top: 6px;
+        }
+
+        @include r(576) {
+          display: none;
+        }
+      }
+    }
+
+    &--cart {
+      border-radius: 0px 25px 25px 0px;
+      padding: 23px 40px 12px 30px;
+      margin-right: 19px;
+
+      @include r(1536) {
+        padding: 19px 36px 8px 26px;
+        margin-right: 15px;
+      }
+
+      @include r(1200) {
+        padding: 16px 33px 5px 23px;
+        margin-right: 15px;
+      }
+
+      @include r(576) {
+        padding: 0;
+        margin-right: 0;
+      }
+
+      .menu__num {
+        right: 30px;
+
+        @include r(1536) {
+          right: 27px;
+        }
+
+        @include r(1200) {
+          right: 25px;
+        }
+
+        @include r(576) {
+          right: 4px;
+        }
+      }
+    }
+  }
+
+  &__num {
+    content: "";
+    position: absolute;
+    right: 21px;
+    top: 16px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    background-color: $white-400;
+    font-size: 10px;
+
+    @include r(1536) {
+      right: 18px;
+      top: 12px;
+    }
+
+    @include r(1200) {
+      right: 14px;
+      top: 10px;
+    }
+
+    @include r(576) {
+      right: 4px;
+      top: 7px;
+      background-color: $orange-300;
+    }
+  }
+}

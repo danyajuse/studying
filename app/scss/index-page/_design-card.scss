@@ -1,0 +1,92 @@
+
+.design-card {
+  position: relative;
+  padding: 35px 25px;
+  width: 374px;
+  height: 247px;
+  background-color: #f8f8f8;
+  transition: color 0.5s ease;
+
+  @include r(992) {
+    width: 350px;
+    height: 238px;
+  }
+
+  @include r(576) {
+    width: 300px;
+    height: 211px;
+  }
+
+  &:hover .design-card__descr {
+    color: $gray-300;
+  }
+
+  &__wrapper {
+    position: absolute;
+    top: 0;
+    right: 0;
+
+    &--chair {
+      top: 54px;
+      right: 59px;
+
+      @include r(992) {
+        right: 50px;
+      }
+
+      @include r(576) {
+        right: 30px;
+      }
+    }
+
+    &--big-chair {
+      top: 41px;
+      right: 29px;
+
+      @include r(768) {
+        right: 15px;
+      }
+
+      @include r(576) {
+        width: 125px;
+      }
+    }
+  }
+
+  &__descr {
+    position: relative;
+    max-width: 187px;
+    padding-left: 15px;
+    font-family: $dmFont;
+    line-height: 1.4;
+    font-weight: 700;
+    color: $black-300;
+
+    @include r(576) {
+      padding-left: 0;
+      max-width: 160px;
+    }
+  }
+
+  &__title {
+    font-size: 20px;
+    transition: color 0.5s ease;
+    margin-bottom: 5px;
+    @include line-clamp(2);
+
+    @include r(576) {
+      font-size: 17px;
+    }
+
+    &:hover {
+      color: $blue-800;
+    }
+  }
+
+  &__type {
+    display: block;
+    font-size: 16px;
+    color: $gray-300;
+    @include overflow(55%);
+  }
+}

@@ -6,11 +6,13 @@ const uglify = require('gulp-uglify');
 const imagemin = require('gulp-imageMin');
 const del = require('del');
 const browserSync = require('browser-sync').create();
+const fileInclude = require('gulp-file-include');
+const sprite = require('gulp-svg-sprite');
 
 function browsersync() {
   browserSync.init({
     server: {
-      baseDir: 'app/'
+      baseDir: 'build/'
     },
     notify: false
   })
@@ -24,7 +26,7 @@ function styles() {
       overrideBrowserlist: ['last 10 versions'],
       grid: true
     }))
-    .pipe(dest('app/css'))
+    .pipe(dest('build/css'))
     .pipe(browserSync.stream())
 }
 
@@ -38,25 +40,57 @@ function scripts() {
   ])
     .pipe(concat('main.min.js'))
     .pipe(uglify())
-    .pipe(dest('app/js'))
+    .pipe(dest('build/js'))
     .pipe(browserSync.stream())
 }
 
-function images() {
-  return src('app/images/**/*.*')
-    .pipe(imagemin([
-      imagemin.gifsicle({interlaced: true}),
-      imagemin.mozjpeg({quality: 75, progressive: true}),
-      imagemin.optipng({optimizationLevel: 5}),
-      imagemin.svgo({
-          plugins: [
-              {removeViewBox: true},
-              {cleanupIDs: false}
-          ]
-      })
-  ]))
-    .pipe(dest('dist/images'))
+function svgSprite() {
+  return src('app/images/sprite/*.svg')
+    .pipe(sprite({
+      mode: {
+        stack: {
+          sprite: '../sprite.svg'
+        }
+      }
+    }))
+    .pipe(dest('./build/images'))
 }
+
+function html() {
+  return src(['app/*.html', '!app/parts/**/*.html'])
+    .pipe(fileInclude({
+      prefix: '@@',
+      basepath: '@file'
+    }))
+    .pipe(dest('./build'))
+    .pipe(browserSync.stream())
+}
+
+function fonts() {
+  return src('app/fonts/*')
+    .pipe(dest('build/fonts'))
+}
+
+function images() {
+  return src('app/images/content/**/*')
+    .pipe(dest('build/images/content'))
+}
+
+// function images() {
+//   return src('app/images/**/*.*')
+//     .pipe(imagemin([
+//       imagemin.gifsicle({interlaced: true}),
+//       imagemin.mozjpeg({quality: 75, progressive: true}),
+//       imagemin.optipng({optimizationLevel: 5}),
+//       imagemin.svgo({
+//           plugins: [
+//               {removeViewBox: true},
+//               {cleanupIDs: false}
+//           ]
+//       })
+//   ]))
+//     .pipe(dest('dist/images'))
+// }
 
 function build() {
   return src([
@@ -74,7 +108,10 @@ function cleanDist() {
 function watching() {
   watch(['app/scss/**/*.scss'], styles);
   watch(['app/js/**/*.js', '!app/js/main.min.js'], scripts);
-  watch(['app/**/*.html']).on('change', browserSync.reload)
+  watch(['app/*.html'], html);
+  watch('app/images/content/*', parallel('images'));
+  watch('app/images/sprite/*', parallel('svgSprite'));
+  watch('app/fonts/*', parallel('fonts'));
 }
 
 exports.styles = styles;
@@ -83,5 +120,8 @@ exports.browserSync = browsersync;
 exports.watching = watching;
 exports.images = images;
 exports.cleanDist = cleanDist;
+exports.svgSprite = svgSprite;
+exports.fonts = fonts;
+exports.html = html;
 exports.build = series(cleanDist, images, build);
-exports.default = parallel(styles, scripts, browsersync, watching);
+exports.default = series(parallel(styles, scripts, fonts, html, images, svgSprite), parallel(browsersync, watching));

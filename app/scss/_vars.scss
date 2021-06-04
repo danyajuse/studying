@@ -3,6 +3,7 @@ $dmFont: "DM Sans", sans-serif;
 $popFont: "Poppins", sans-serif;
 
 $orange-300: #fcd7b6;
+$orange-250: #feefe2;
 $orange-200: #fef7f0;
 $orange-50: #f3eee8;
 
@@ -38,6 +39,12 @@ $white-400: #ffffff;
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
+}
+
+@mixin r($width) {
+  @media only screen and (max-width: $width+ "px") {
+    @content;
+  }
 }
 
 @function max($numbers...) {

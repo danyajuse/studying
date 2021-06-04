@@ -1,0 +1,43 @@
+.design-products {
+  padding-top: 94px;
+  padding-bottom: 124px;
+
+  @include r(1200) {
+    padding-bottom: 90px;
+  }
+
+  @include r(1200) {
+    padding-bottom: 65px;
+    padding-top: 65px;
+  }
+
+  &__title {
+    margin-bottom: 24px;
+  }
+
+  &__items {
+    display: flex;
+    flex-wrap: wrap;
+    margin: -15px -22px;
+
+    @include r(1200) {
+      justify-content: center;
+    }
+
+    @include r(992) {
+      margin: -10px;
+    }
+  }
+
+  &__item {
+    margin: 15px;
+
+    @include r(1200) {
+      margin: 25px;
+    }
+
+    @include r(992) {
+      margin: 10px;
+    }
+  }
+}

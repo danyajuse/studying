@@ -1,0 +1,123 @@
+.news-card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  padding: 0 0 22px;
+  max-width: 370px;
+  height: 100%;
+  font-family: $dmFont;
+  background-color: $white-400;
+
+  @include r(992) {
+    max-width: 350px;
+  }
+
+  &__wrapper {
+    position: relative;
+    height: 250px;
+    margin-bottom: 33px;
+
+    @include r(1200) {
+      margin-bottom: 25px;
+    }
+  }
+
+  &__img {
+    @include r(1200) {
+      height: 100%;
+      width: 100%;
+    }
+  }
+
+  &__extra {
+    position: absolute;
+    bottom: -12px;
+    left: 29px;
+    padding: 6px 30px;
+    border-radius: 12px;
+    background-color: $gray-300;
+    font-family: $popFont;
+    text-transform: uppercase;
+    font-weight: 700;
+    line-height: 1.4;
+    color: $white-400;
+    transition: background-color 0.5s ease, color 0.5s ease;
+    @include overflow(250px);
+
+    &:hover {
+      color: $gray-600;
+      background-color: $gray-150;
+    }
+  }
+
+  &__link {
+    transition: color 0.5s ease;
+    &:hover {
+      color: $blue-500;
+    }
+  }
+
+  &__title {
+    max-width: 312px;
+    padding-left: 30px;
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 1.2;
+    @include line-clamp(5);
+
+    @include r(1200) {
+      max-width: 330px;
+      padding-left: 12px;
+    }
+
+    @include r(576) {
+      font-size: 17px;
+    }
+  }
+
+  &__add {
+    position: relative;
+    padding-left: 30px;
+    margin-top: auto;
+    padding-top: 35px;
+    font-family: $rubikFont;
+    text-transform: uppercase;
+    font-size: 12px;
+    line-height: 1.4;
+    @include line-clamp(1);
+
+    &::before {
+      content: "";
+      position: absolute;
+      background-color: $gray-150;
+      width: 315px;
+      height: 1px;
+      top: 13px;
+
+      @include r(786) {
+        right: 15px;
+      }
+    }
+
+    svg {
+      position: absolute;
+      left: 0;
+    }
+  }
+
+  &__date {
+    position: relative;
+    padding-left: 20px;
+  }
+
+  &__author {
+    position: relative;
+    padding-left: 30px;
+
+    svg {
+      left: 10px;
+    }
+  }
+
+  
+}

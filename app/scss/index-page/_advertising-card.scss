@@ -1,0 +1,190 @@
+.advertising-card {
+  position: relative;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  max-width: 870px;
+  color: $blue-600;
+  background-color: $orange-250;
+
+  @include r(1536) {
+    justify-content: center;
+  }
+
+  &--left {
+    .advertising-card__descr {
+      max-width: 477px;
+      padding-right: 139px;
+
+      @include r(1536) {
+        padding-right: 0;
+        padding-left: 105px;
+      }
+
+      @include r(1200) {
+        padding-left: 188px;
+      }
+
+      @include r(992) {
+        padding-left: 0;
+        max-width: 300px;
+      }
+
+      @include r(768) {
+        padding-left: 22px;
+        max-width: 370px;
+      }
+    }
+
+    .advertising-card__wrapper {
+      @include r(1200) {
+        left: -10px;
+      }
+
+      @include r(768) {
+        width: 150px;
+      }
+    }
+  }
+
+  &__wrapper {
+    position: absolute;
+    top: -24%;
+    left: 17%;
+    max-width: 245px;
+
+    @include r(1536) {
+      left: -10px;
+      top: -140px;
+    }
+
+    @include r(1200) {
+      top: -122px;
+      left: -38px;
+      width: 40%;
+    }
+
+    @include r(992) {
+      display: none;
+    }
+
+    @include r(768) {
+      position: static;
+      display: block;
+      width: 144px;
+    }
+  }
+
+  &__descr {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 388px;
+    max-width: 440px;
+    padding-right: 109px;
+
+    @include r(1536) {
+      height: 320px;
+      max-width: 535px;
+      padding-right: 0;
+      padding-left: 202px;
+    }
+
+    @include r(1200) {
+      height: 280px;
+      max-width: 432px;
+      padding-left: 146px;
+    }
+
+    @include r(992) {
+      padding-left: 0px;
+      max-width: 300px;
+    }
+
+    @include r(768) {
+      max-width: 370px;
+      padding-left: 15px;
+    }
+
+    @include r(576) {
+      max-width: 215px;
+    }
+  }
+
+  &__title {
+    font-family: $dmFont;
+    display: flex;
+    font-size: 26px;
+    font-weight: 700;
+    line-height: 1.2;
+    margin-bottom: 15px;
+    @include line-clamp(3);
+
+    @include r(576) {
+      font-size: 22px;
+    }
+  }
+
+  &__text {
+    font-size: 16px;
+    line-height: 2;
+    margin-bottom: 20px;
+    @include line-clamp(5);
+
+    @include r(576) {
+      font-size: 14px;
+    }
+  }
+
+  &__link {
+    position: relative;
+    margin-right: auto;
+    padding: 24px 85px 21px 20px;
+    border: 1px solid $blue-800;
+    border-radius: 5px;
+    font-size: 15px;
+    font-weight: 500;
+    color: $blue-800;
+    transition: color 0.5s ease, background-color 0.5s ease;
+
+    @include r(1200) {
+      padding: 20px 71px 16px 16px;
+    }
+
+    @include r(576) {
+      padding: 17px 59px 13px 13px;
+    }
+
+    svg {
+      position: absolute;
+      top: 29px;
+      right: 19px;
+      color: $blue-800;
+      transition: fill 0.5s ease;
+
+      @include r(1200) {
+        top: 26px;
+      }
+
+      @include r(576) {
+        top: 23px;
+      }
+    }
+
+    &:hover {
+      background-color: $gray-150;
+
+      svg {
+        fill: $blue-800;
+      }
+    }
+
+    &:focus {
+      box-shadow: 0 0 3px $blue-500;
+    }
+
+    &:active {
+      background-color: $gray-50;
+    }
+  }
+}

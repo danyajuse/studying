@@ -1,0 +1,43 @@
+.categories {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 74px;
+  overflow-x: auto;
+
+  @include r(576) {
+    justify-content: flex-start;
+    margin-bottom: 50px;
+  }
+  &__item {
+    &:not(:last-child) {
+      margin-right: 30px;
+
+      @include r(576) {
+        margin-right: 15px;
+      }
+    }
+  }
+
+  &__btn {
+    border: none;
+    padding: 0;
+    font-family: $dmFont;
+    font-size: 16px;
+    font-weight: 700;
+    color: $gray-450;
+    background-color: transparent;
+    transition: color 0.5s ease;
+
+    &:hover {
+      color: $gray-650;
+    }
+
+    &:focus {
+      outline: 2px solid $blue-500;
+    }
+  }
+
+  .mixitup-control-active {
+    color: $gray-650;
+  }
+}

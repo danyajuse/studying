@@ -1,8 +1,16 @@
 $(function() {
 
   $(window).on("scroll", function () {
-    $('header').toggleClass("header--active", $(this).scrollTop() > $(window).height());
+    $('header').toggleClass("header--active", $(this).scrollTop() > 20);
   });
+
+  $('.menu__btn').on('click', function () {
+    $('.menu__list').toggleClass('menu__list--active');
+  });
+
+  $('.menu__item').on('click', function () {
+    $('.menu__list').removeClass('menu__list--active');
+  })
   
   $('.trending__slider').slick({
     dots: true,
@@ -12,6 +20,16 @@ $(function() {
   $('.partners__slider').slick({
     dots: false,
     arrows: false,
+    slidesToShow: 5,
+    slidesToScroll: 1,
+    autoplay: true,
+    responsive: [{
+      breakpoint: 576,
+      settings: {
+        slidesToShow: 3,
+      }
+    }
+    ]
   });
 
   const mixin1 = document.querySelector('.weak-products__items');
