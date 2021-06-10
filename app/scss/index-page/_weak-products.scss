@@ -12,11 +12,11 @@
     flex-wrap: wrap;
     margin: -15px;
 
-    @include r(1200) {
+    @include r($desk) {
       justify-content: center;
     }
 
-    @include r(576) {
+    @include r($mob) {
       margin: 0;
     }
   }

@@ -1,15 +1,15 @@
 .trending {
   padding-top: 145px;
 
-  @include r(1536) {
+  @include r($deskLarge) {
     padding-top: 110px;
   }
 
-  @include r(1200) {
+  @include r($desk) {
     padding-top: 90px;
   }
 
-  @include r(576) {
+  @include r($mob) {
     padding-top: 55px;
   }
 
@@ -25,15 +25,15 @@
     height: 76vh;
     min-height: 580px;
 
-    @include r(1200) {
+    @include r($desk) {
       height: 47vh;
     }
 
-    @include r(768) {
+    @include r($tabl) {
       justify-content: space-around;
     }
 
-    @include r(576) {
+    @include r($mob) {
       display: block;
     }
   }
@@ -43,25 +43,25 @@
     margin-right: 100px;
     padding-bottom: 65px;
 
-    @include r(1536) {
+    @include r($deskLarge) {
       margin-right: 0;
     }
 
-    @include r(1200) {
+    @include r($desk) {
       max-width: 390px;
       padding-bottom: 45px;
     }
 
-    @include r(992) {
+    @include r($lapt) {
       max-width: 360px;
     }
 
-    @include r(768) {
+    @include r($tabl) {
       padding-left: 10px;
       max-width: 340px;
     }
 
-    @include r(576) {
+    @include r($mob) {
       max-width: 350px;
       padding-top: 25px;
     }
@@ -76,19 +76,19 @@
     color: $blue-600;
     @include line-clamp(3);
 
-    @include r(1536) {
+    @include r($deskLarge) {
       font-size: 65px;
     }
 
-    @include r(992) {
+    @include r($lapt) {
       font-size: 57px;
     }
 
-    @include r(768) {
+    @include r($tabl) {
       font-size: 54px;
     }
 
-    @include r(576) {
+    @include r($mob) {
       font-size: 40px;
     }
   }
@@ -101,19 +101,19 @@
     color: $blue-800;
     @include line-clamp(3);
 
-    @include r(1536) {
+    @include r($deskLarge) {
       font-size: 17px;
     }
 
-    @include r(1200) {
+    @include r($desk) {
       max-width: 335px;
     }
 
-    @include r(768) {
+    @include r($tabl) {
       font-size: 16px;
     }
 
-    @include r(576) {
+    @include r($mob) {
       margin-bottom: 20px;
     }
   }
@@ -127,22 +127,22 @@
     position: relative;
     z-index: 1;
 
-    @include r(1536) {
+    @include r($deskLarge) {
       max-width: 530px;
       max-height: 500px;
     }
 
-    @include r(1200) {
+    @include r($desk) {
       max-width: 500px;
       max-height: 470px;
     }
 
-    @include r(992) {
+    @include r($lapt) {
       max-width: 350px;
       max-height: 320px;
     }
 
-    @include r(576) {
+    @include r($mob) {
       max-width: 265px;
       max-height: 220px;
       margin: 0 auto;
@@ -158,7 +158,7 @@
       border-radius: 50%;
       background-image: linear-gradient(90deg, #fff0, rgb(255, 255, 255) 100%);
 
-      @include r(1200) {
+      @include r($desk) {
         top: 50%;
         left: 50%;
         transform: translate(-50%, -50%);
@@ -175,15 +175,15 @@
     font-size: 15px;
     font-weight: 500;
 
-    @include r(992) {
+    @include r($lapt) {
       padding: 19px 80px 17px 19px;
     }
 
-    @include r(768) {
+    @include r($tabl) {
       padding: 16px 72px 15px 16px;
     }
 
-    @include r(576) {
+    @include r($mob) {
       padding: 14px 57px 12px 12px;
     }
 
@@ -212,15 +212,15 @@
       fill: $white-400;
       transition: fill 0.5s ease;
 
-      @include r(992) {
+      @include r($lapt) {
         top: 25px;
       }
 
-      @include r(768) {
+      @include r($tabl) {
         top: 22px;
       }
 
-      @include r(576) {
+      @include r($mob) {
         top: 19px;
       }
     }
@@ -233,7 +233,7 @@
     transform: translateX(-50%);
     display: flex;
 
-    @include r(576) {
+    @include r($mob) {
       bottom: 23px;
     }
 

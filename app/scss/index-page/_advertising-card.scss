@@ -7,7 +7,7 @@
   color: $blue-600;
   background-color: $orange-250;
 
-  @include r(1536) {
+  @include r($deskLarge) {
     justify-content: center;
   }
 
@@ -16,32 +16,32 @@
       max-width: 477px;
       padding-right: 139px;
 
-      @include r(1536) {
+      @include r($deskLarge) {
         padding-right: 0;
         padding-left: 105px;
       }
 
-      @include r(1200) {
+      @include r($desk) {
         padding-left: 188px;
       }
 
-      @include r(992) {
+      @include r($lapt) {
         padding-left: 0;
         max-width: 300px;
       }
 
-      @include r(768) {
+      @include r($tabl) {
         padding-left: 22px;
         max-width: 370px;
       }
     }
 
     .advertising-card__wrapper {
-      @include r(1200) {
+      @include r($desk) {
         left: -10px;
       }
 
-      @include r(768) {
+      @include r($tabl) {
         width: 150px;
       }
     }
@@ -53,22 +53,22 @@
     left: 17%;
     max-width: 245px;
 
-    @include r(1536) {
+    @include r($deskLarge) {
       left: -10px;
       top: -140px;
     }
 
-    @include r(1200) {
+    @include r($desk) {
       top: -122px;
       left: -38px;
       width: 40%;
     }
 
-    @include r(992) {
+    @include r($lapt) {
       display: none;
     }
 
-    @include r(768) {
+    @include r($tabl) {
       position: static;
       display: block;
       width: 144px;
@@ -78,7 +78,7 @@
   &__img {
     min-height: 405px;
 
-    @include r(1200) {
+    @include r($desk) {
       min-height: auto;
     }
   }
@@ -91,30 +91,30 @@
     max-width: 440px;
     padding-right: 109px;
 
-    @include r(1536) {
+    @include r($deskLarge) {
       height: 320px;
       max-width: 535px;
       padding-right: 0;
       padding-left: 202px;
     }
 
-    @include r(1200) {
+    @include r($desk) {
       height: 280px;
       max-width: 432px;
       padding-left: 146px;
     }
 
-    @include r(992) {
+    @include r($lapt) {
       padding-left: 0px;
       max-width: 300px;
     }
 
-    @include r(768) {
+    @include r($tabl) {
       max-width: 370px;
       padding-left: 15px;
     }
 
-    @include r(576) {
+    @include r($mob) {
       max-width: 215px;
     }
   }
@@ -128,7 +128,7 @@
     margin-bottom: 15px;
     @include line-clamp(3);
 
-    @include r(576) {
+    @include r($mob) {
       font-size: 22px;
     }
   }
@@ -139,7 +139,7 @@
     margin-bottom: 20px;
     @include line-clamp(5);
 
-    @include r(576) {
+    @include r($mob) {
       font-size: 14px;
     }
   }
@@ -155,11 +155,11 @@
     color: $blue-800;
     transition: color 0.5s ease, background-color 0.5s ease;
 
-    @include r(1200) {
+    @include r($desk) {
       padding: 20px 71px 16px 16px;
     }
 
-    @include r(576) {
+    @include r($mob) {
       padding: 17px 59px 13px 13px;
     }
 
@@ -186,11 +186,11 @@
       color: $blue-800;
       transition: fill 0.5s ease;
 
-      @include r(1200) {
+      @include r($desk) {
         top: 26px;
       }
 
-      @include r(576) {
+      @include r($mob) {
         top: 23px;
       }
     }

@@ -12,7 +12,7 @@ body {
   padding: 0 15px;
   margin: 0 auto;
 
-  @include r(576) {
+  @include r($mob) {
     padding: 0 10px;
   }
 
@@ -43,11 +43,11 @@ body {
   color: $black-300;
   @include line-clamp(3);
 
-  @include r(992) {
+  @include r($lapt) {
     font-size: 33px;
   }
 
-  @include r(576) {
+  @include r($mob) {
     font-size: 27px;
   }
 }

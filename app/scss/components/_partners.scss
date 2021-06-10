@@ -3,7 +3,7 @@
   background-color: $orange-200;
   margin-bottom: 83px;
 
-  @include r(768) {
+  @include r($tabl) {
     margin-bottom: 65px;
   }
 

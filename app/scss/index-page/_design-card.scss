@@ -7,12 +7,12 @@
   background-color: $gray-50;
   transition: color 0.5s ease;
 
-  @include r(992) {
+  @include r($lapt) {
     width: 350px;
     height: 238px;
   }
 
-  @include r(576) {
+  @include r($mob) {
     width: 300px;
     height: 211px;
   }
@@ -32,11 +32,11 @@
       top: 54px;
       right: 59px;
 
-      @include r(992) {
+      @include r($lapt) {
         right: 50px;
       }
 
-      @include r(576) {
+      @include r($mob) {
         right: 30px;
       }
     }
@@ -45,18 +45,14 @@
       top: 41px;
       right: 29px;
 
-      @include r(768) {
+      @include r($tabl) {
         right: 15px;
       }
 
-      @include r(576) {
+      @include r($mob) {
         width: 125px;
       }
     }
-  }
-
-  &__img {
-    
   }
 
   &__descr {
@@ -68,7 +64,7 @@
     font-weight: 700;
     color: $black-300;
 
-    @include r(576) {
+    @include r($mob) {
       padding-left: 0;
       max-width: 160px;
     }
@@ -80,7 +76,7 @@
     margin-bottom: 5px;
     @include line-clamp(2);
 
-    @include r(576) {
+    @include r($mob) {
       font-size: 17px;
     }
 

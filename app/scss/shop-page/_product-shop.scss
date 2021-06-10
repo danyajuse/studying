@@ -2,17 +2,17 @@
   padding-top: 115px;
   padding-bottom: 120px;
 
-  @include r(992) {
+  @include r($lapt) {
     padding-top: 90px;
     padding-bottom: 90px;
   }
 
-  @include r(768) {
+  @include r($tabl) {
     padding-top: 75px;
     padding-bottom: 75px;
   }
 
-  @include r(576) {
+  @include r($mob) {
     padding-top: 60px;
     padding-top: 60px;
   }
@@ -20,7 +20,7 @@
   &__inner {
     display: flex;
 
-    @include r(992) {
+    @include r($lapt) {
       flex-direction: column;
     }
   }
@@ -30,12 +30,12 @@
     width: 100%;
     margin-right: 30px;
 
-    @include r(992) {
+    @include r($lapt) {
       display: none;
     }
 
     &--active {
-      @include r(992) {
+      @include r($lapt) {
         position: absolute;
         z-index: 10;
         top: 43%;
@@ -53,7 +53,7 @@
     width: 270px;
     margin-bottom: 49px;
 
-    @include r(992) {
+    @include r($lapt) {
       width: 100%;
     }
   }
@@ -67,7 +67,7 @@
     z-index: 10;
     transform: rotate(90deg);
 
-    @include r(992) {
+    @include r($lapt) {
       display: flex;
       justify-content: center;
       align-items: center;
@@ -96,15 +96,15 @@
     margin: -25px -15px;
     margin-bottom: 85px;
 
-    @include r(992) {
+    @include r($lapt) {
       margin-bottom: 75px;
     }
 
-    @include r(768) {
+    @include r($tabl) {
       margin-bottom: 65px;
     }
 
-    @include r(576) {
+    @include r($mob) {
       margin: 0;
       margin-bottom: 50px;
     }
@@ -162,7 +162,7 @@
       }
 
       .product-card__img-list {
-        @include r(1200) {
+        @include r($desk) {
           max-width: 75%;
         }
       }
@@ -393,7 +393,7 @@
   line-height: 1;
   color: $blue-500;
 
-  @include r(768) {
+  @include r($tabl) {
     display: none;
   }
 

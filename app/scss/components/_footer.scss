@@ -5,11 +5,11 @@
     padding-bottom: 70px;
     border-bottom: 1px solid $gray-150;
 
-    @include r(768) {
+    @include r($tabl) {
       padding-bottom: 30px;
     }
 
-    @include r(576) {
+    @include r($mob) {
       padding-bottom: 25px;
     }
   }
@@ -19,18 +19,18 @@
     justify-content: space-between;
     align-items: baseline;
 
-    @include r(992) {
+    @include r($lapt) {
       justify-content: space-around;
     }
 
-    @include r(768) {
+    @include r($tabl) {
       flex-wrap: wrap;
       justify-content: space-between;
       margin: 0 auto;
       max-width: 576px;
     }
 
-    @include r(576) {
+    @include r($mob) {
       max-width: 80%;
     }
   }
@@ -39,23 +39,23 @@
     max-width: 270px;
     width: 100%;
 
-    @include r(992) {
+    @include r($lapt) {
       max-width: 226px;
       width: auto;
     }
 
-    @include r(768) {
+    @include r($tabl) {
       max-width: 250px;
       width: auto;
       margin-bottom: 50px;
     }
 
-    @include r(576) {
+    @include r($mob) {
       margin-bottom: 40px;
     }
 
     &::last-child {
-      @include r(768) {
+      @include r($tabl) {
         margin-bottom: 0;
       }
     }
@@ -64,7 +64,7 @@
   &__logo {
     transform: translateY(-15px);
 
-    @include r(768) {
+    @include r($tabl) {
       max-width: 120px;
     }
   }
@@ -83,7 +83,7 @@
     display: inline-block;
     margin-bottom: 8px;
 
-    @include r(576) {
+    @include r($mob) {
       max-width: 90px;
       margin-bottom: 0;
     }
@@ -100,7 +100,7 @@
     color: #1f2044;
     @include overflow(200px);
 
-    @include r(576) {
+    @include r($mob) {
       margin-bottom: 12px;
     }
   }
@@ -137,7 +137,7 @@
   &__text {
     margin-bottom: 40px;
     
-    @include r(576) {
+    @include r($mob) {
       margin-bottom: 20px;
     }
   }
@@ -149,12 +149,12 @@
     padding-top: 30px;
     padding-bottom: 40px;
 
-    @include r(768) {
+    @include r($tabl) {
       padding-top: 25px;
       padding-bottom: 35px;
     }
 
-    @include r(576) {
+    @include r($mob) {
       flex-wrap: wrap;
       padding-top: 20px;
       padding-bottom: 25px;
@@ -166,12 +166,12 @@
     line-height: 2.3;
     @include line-clamp(3);
 
-    @include r(768) {
+    @include r($tabl) {
       max-width: 300px;
       line-height: 1.4;
     }
 
-    @include r(576) {
+    @include r($mob) {
       order: 2;
       
     }
@@ -179,7 +179,7 @@
 
   .menu {
     &__list {
-      @include r(992) {
+      @include r($lapt) {
         position: static;
         display: flex;
         padding: 0;
@@ -187,7 +187,7 @@
         background-color: transparent;
       }
 
-      @include r(576) {
+      @include r($mob) {
         order: 1;
         margin-bottom: 15px;
       }
@@ -216,11 +216,11 @@
     line-height: 2;
     border-right: 2px solid $gray-350;
 
-    @include r(768) {
+    @include r($tabl) {
       line-height: 1.4;
     }
 
-    @include r(576) {
+    @include r($mob) {
       line-height: 1;
     }
 
@@ -249,11 +249,11 @@
     background-color: $orange-200;
     transition: background-color 0.7s ease;
 
-    @include r(992) {
+    @include r($lapt) {
       width: auto;
     }
 
-    @include r(576) {
+    @include r($mob) {
       width: 100%;
     }
 

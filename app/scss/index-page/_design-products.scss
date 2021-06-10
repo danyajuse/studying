@@ -2,11 +2,11 @@
   padding-top: 94px;
   padding-bottom: 124px;
 
-  @include r(1200) {
+  @include r($desk) {
     padding-bottom: 90px;
   }
 
-  @include r(1200) {
+  @include r($desk) {
     padding-bottom: 65px;
     padding-top: 65px;
   }
@@ -20,11 +20,11 @@
     flex-wrap: wrap;
     margin: -15px -22px;
 
-    @include r(1200) {
+    @include r($desk) {
       justify-content: center;
     }
 
-    @include r(992) {
+    @include r($lapt) {
       margin: -10px;
     }
   }
@@ -32,11 +32,11 @@
   &__item {
     margin: 15px;
 
-    @include r(1200) {
+    @include r($desk) {
       margin: 25px;
     }
 
-    @include r(992) {
+    @include r($lapt) {
       margin: 10px;
     }
   }

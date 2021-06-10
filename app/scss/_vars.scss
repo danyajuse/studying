@@ -34,6 +34,12 @@ $blue-500: #234969;
 $white-400: #ffffff;
 $white-300: #fefefe;
 
+$deskLarge: 1536;
+$desk: 1200;
+$lapt: 992;
+$tabl: 768;
+$mob: 576;
+
 @mixin line-clamp($lines) {
   display: -webkit-box;
   -webkit-line-clamp: $lines;

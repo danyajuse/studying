@@ -8,7 +8,7 @@
   text-align: center;
   background-color: $white-400;
 
-  @include r(1536) {
+  @include r($deskLarge) {
     padding: 47px 18px 22px;
   }
 
@@ -35,7 +35,7 @@
     opacity: 0;
     transition: opacity 0.5s ease;
 
-    @include r(992) {
+    @include r($lapt) {
       opacity: 1;
       top: 64%;
     }

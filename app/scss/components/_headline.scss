@@ -2,11 +2,11 @@
   padding-top: 145px;
   font-family: $rubikFont;
 
-  @include r(1200) {
+  @include r($desk) {
     padding-top: 100px;
   }
 
-  @include r(992) {
+  @include r($lapt) {
     padding-top: 90px;
   }
 
@@ -17,7 +17,7 @@
     padding: 18px 0 26px;
     background-color: $gray-100;
 
-    @include r(576) {
+    @include r($mob) {
       padding: 15px 0 20px;
     }
   }
@@ -29,11 +29,11 @@
     color: $blue-1000;
     background-color: $gray-100;
 
-    @include r(992) {
+    @include r($lapt) {
       font-size: 34px;
     }
 
-    @include r(576) {
+    @include r($mob) {
       font-size: 30px;
     }
   }

@@ -8,11 +8,11 @@
   background-position: center center;
   background-repeat: no-repeat;
 
-  @include r(1200) {
+  @include r($desk) {
     height: 37vh;
   }
 
-  @include r(1200) {
+  @include r($desk) {
     height: 30vh;
   }
 
@@ -32,12 +32,12 @@
     background-color: $gray-300;
     border-radius: 50%;
 
-    @include r(768) {
+    @include r($tabl) {
       width: 85px;
       height: 85px;
     }
 
-    @include r(576) {
+    @include r($mob) {
       width: 75px;
       height: 75px;
     }

@@ -4,7 +4,7 @@
   margin-bottom: 74px;
 
 
-  @include r(576) {
+  @include r($mob) {
     justify-content: flex-start;
     max-width: 86%;
     overflow-x: auto;
@@ -14,7 +14,7 @@
     &:not(:last-child) {
       margin-right: 30px;
 
-      @include r(576) {
+      @include r($mob) {
         margin-right: 20px;
       }
     }

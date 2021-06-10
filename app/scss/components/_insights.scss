@@ -5,19 +5,19 @@
   margin-bottom: -170px;
   position: relative;
 
-  @include r(1200) {
+  @include r($desk) {
     padding-top: 90px;
     margin-bottom: -145px;
   }
 
-  @include r(768) {
+  @include r($tabl) {
     padding-top: 65px;
   }
   
   & + .partners {
     padding-top: 190px;
 
-    @include r(992) {
+    @include r($lapt) {
       padding-top: 110px;
     }
   }
@@ -41,7 +41,7 @@
     font-weight: 700;
     transition: color 0.5s ease;
 
-    @include r(576) {
+    @include r($mob) {
       max-width: 72px;
       width: 100%;
       padding-right: 0;
@@ -57,7 +57,7 @@
       height: 12px;
       transition: fill 0.5s ease;
 
-      @include r(576) {
+      @include r($mob) {
         top: 3px;
       }
     }
@@ -75,15 +75,15 @@
     display: flex;
     justify-content: space-between;
 
-    @include r(992) {
+    @include r($lapt) {
       flex-wrap: wrap;
       justify-content: center;
     }
 
-    @include r(768) {
+    @include r($tabl) {
     }
 
-    @include r(576) {
+    @include r($mob) {
       flex-direction: column;
       align-items: center;
     }
@@ -95,18 +95,18 @@
     &:not(:last-child) {
       margin-right: 15px;
 
-      @include r(992) {
+      @include r($lapt) {
         margin-right: 0;
         margin-bottom: 15px;
       }
     }
 
     &:first-child {
-      @include r(992) {
+      @include r($lapt) {
         margin-right: 20px;
       }
 
-      @include r(576) {
+      @include r($mob) {
         margin-right: 0;
       }
     }
