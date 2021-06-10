@@ -77,6 +77,18 @@
     p:not(:last-child) {
       margin-bottom: 10px;
     }
+
+    a {
+      transition: color 0.5s ease;
+
+      &:hover {
+        color: $gray-300;
+      }
+
+      &:focus {
+        outline: 2px solid $blue-500;
+      }
+    }
   }
 
   &__logo {
@@ -111,8 +123,7 @@
     }
   }
 
-  &__link,
-  .footer__text a {
+  &__link {
     transition: color 0.5s ease;
 
     &:hover {
@@ -136,7 +147,7 @@
 
   &__text {
     margin-bottom: 40px;
-    
+
     @include r($mob) {
       margin-bottom: 20px;
     }
@@ -173,7 +184,6 @@
 
     @include r($mob) {
       order: 2;
-      
     }
   }
 
