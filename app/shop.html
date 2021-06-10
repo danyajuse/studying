@@ -1,0 +1,22 @@
+@@include('./parts/components/_top-page.html', {
+  "title": "Products of Glee",
+})
+
+  @@include('./parts/components/_header.html')
+
+  <main>
+    @@include('./parts/components/_headline.html', {
+      "parent": "Home",
+      "first-child": "Product list 1"
+    })
+
+    @@include('./parts/shop-page/_product-shop.html')
+
+
+    @@include('./parts/components/_partners.html')
+
+  </main>
+
+  @@include('./parts/components/_footer.html')
+
+@@include('./parts/components/_bottom-page.html')

@@ -9,23 +9,30 @@ $orange-50: #f3eee8;
 
 $black-400: #000000;
 $black-300: #191919;
+$black-250: #333333;
+$black-200: rgba(51, 51, 51, 0.7);
 
 $gray-650: #373737;
 $gray-600: #414141;
+$gray-550: #888c91;
 $gray-500: #585858;
 $gray-450: #8b8b8b;
 $gray-400: #a7b4bb;
 $gray-350: #7b7b7b;
 $gray-300: #a3bbc8;
+$gray-250: #c2d2db;
+$gray-200: #b8b8b8;
 $gray-150: #dae4e9;
 $gray-100: #edf1f4;
 $gray-50: #f9f9f9;
 
+$blue-1000: #222933;
 $blue-800: #436372;
 $blue-600: #243f4d;
 $blue-500: #234969;
 
 $white-400: #ffffff;
+$white-300: #fefefe;
 
 @mixin line-clamp($lines) {
   display: -webkit-box;

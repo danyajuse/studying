@@ -13,6 +13,14 @@
   @include r(768) {
     padding-top: 65px;
   }
+  
+  & + .partners {
+    padding-top: 190px;
+
+    @include r(992) {
+      padding-top: 110px;
+    }
+  }
 
   &__wrapper {
     display: flex;
@@ -73,12 +81,17 @@
     }
 
     @include r(768) {
+    }
+
+    @include r(576) {
       flex-direction: column;
       align-items: center;
     }
   }
 
   &__item {
+    box-shadow: 0px 0px 20px 3px $gray-100;
+    
     &:not(:last-child) {
       margin-right: 15px;
 
@@ -90,10 +103,10 @@
 
     &:first-child {
       @include r(992) {
-        margin-right: 30px;
+        margin-right: 20px;
       }
 
-      @include r(786) {
+      @include r(576) {
         margin-right: 0;
       }
     }

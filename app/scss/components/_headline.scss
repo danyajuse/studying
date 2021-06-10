@@ -1,0 +1,62 @@
+.headline {
+  padding-top: 145px;
+  font-family: $rubikFont;
+
+  @include r(1200) {
+    padding-top: 100px;
+  }
+
+  @include r(992) {
+    padding-top: 90px;
+  }
+
+  &__inner {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 18px 0 26px;
+    background-color: $gray-100;
+
+    @include r(576) {
+      padding: 15px 0 20px;
+    }
+  }
+
+  &__title {
+    margin-bottom: 6px;
+    font-size: 36px;
+    font-weight: 400;
+    color: $blue-1000;
+    background-color: $gray-100;
+
+    @include r(992) {
+      font-size: 34px;
+    }
+
+    @include r(576) {
+      font-size: 30px;
+    }
+  }
+
+  .breadcrumbs {
+    display: flex;
+    color: $gray-550;
+    line-height: 1.7;
+
+    &__item {
+      position: relative;
+
+      &:last-child {
+        color: $gray-300;
+      }
+      &:not(:last-child) {
+        margin-right: 22px;
+        ::after {
+          content: "/";
+          position: absolute;
+          right: -15px;
+        }
+      }
+    }
+  }
+}

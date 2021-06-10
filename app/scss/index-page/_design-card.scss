@@ -4,7 +4,7 @@
   padding: 35px 25px;
   width: 374px;
   height: 247px;
-  background-color: #f8f8f8;
+  background-color: $gray-50;
   transition: color 0.5s ease;
 
   @include r(992) {
@@ -23,6 +23,8 @@
 
   &__wrapper {
     position: absolute;
+    min-width: 108px;
+    
     top: 0;
     right: 0;
 
@@ -51,6 +53,10 @@
         width: 125px;
       }
     }
+  }
+
+  &__img {
+    
   }
 
   &__descr {

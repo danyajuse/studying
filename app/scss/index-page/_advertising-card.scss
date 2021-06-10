@@ -75,6 +75,14 @@
     }
   }
 
+  &__img {
+    min-height: 405px;
+
+    @include r(1200) {
+      min-height: auto;
+    }
+  }
+
   &__descr {
     display: flex;
     flex-direction: column;
@@ -155,22 +163,6 @@
       padding: 17px 59px 13px 13px;
     }
 
-    svg {
-      position: absolute;
-      top: 29px;
-      right: 19px;
-      color: $blue-800;
-      transition: fill 0.5s ease;
-
-      @include r(1200) {
-        top: 26px;
-      }
-
-      @include r(576) {
-        top: 23px;
-      }
-    }
-
     &:hover {
       background-color: $gray-150;
 
@@ -185,6 +177,22 @@
 
     &:active {
       background-color: $gray-50;
+    }
+
+    svg {
+      position: absolute;
+      top: 29px;
+      right: 19px;
+      color: $blue-800;
+      transition: fill 0.5s ease;
+
+      @include r(1200) {
+        top: 26px;
+      }
+
+      @include r(576) {
+        top: 23px;
+      }
     }
   }
 }

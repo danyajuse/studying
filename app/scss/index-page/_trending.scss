@@ -24,14 +24,17 @@
     justify-content: center;
     height: 76vh;
     min-height: 580px;
-    
 
     @include r(1200) {
       height: 47vh;
     }
 
+    @include r(768) {
+      justify-content: space-around;
+    }
+
     @include r(576) {
-      flex-direction: column;
+      display: block;
     }
   }
 
@@ -55,11 +58,12 @@
 
     @include r(768) {
       padding-left: 10px;
-      max-width: 230px;
+      max-width: 340px;
     }
 
     @include r(576) {
-      max-width: 240px;
+      max-width: 350px;
+      padding-top: 25px;
     }
   }
 
@@ -108,27 +112,40 @@
     @include r(768) {
       font-size: 16px;
     }
+
+    @include r(576) {
+      margin-bottom: 20px;
+    }
   }
 
   &__wrapper {
+    display: flex;
+    align-items: center;
     max-width: 635px;
+    max-height: 600px;
+    height: 100%;
     position: relative;
     z-index: 1;
 
     @include r(1536) {
       max-width: 530px;
+      max-height: 500px;
     }
 
     @include r(1200) {
       max-width: 500px;
+      max-height: 470px;
     }
 
     @include r(992) {
       max-width: 350px;
+      max-height: 320px;
     }
 
     @include r(576) {
       max-width: 265px;
+      max-height: 220px;
+      margin: 0 auto;
     }
 
     &::after {
@@ -136,36 +153,22 @@
       position: absolute;
       z-index: -1;
       right: -18%;
-      bottom: -74%;
-      width: 642px;
-      height: 642px;
+      width: 100%;
+      height: 100%;
       border-radius: 50%;
       background-image: linear-gradient(90deg, #fff0, rgb(255, 255, 255) 100%);
 
-      @include r(1536) {
-        width: 530px;
-        height: 530px;
-      }
-
       @include r(1200) {
-        right: -10px;
-        width: 480px;
-        height: 480px;
-      }
-
-      @include r(992) {
-        width: 400px;
-        height: 400px;
-      }
-
-      @include r(768) {
-        display: none;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
       }
     }
   }
 
   &__button {
     position: relative;
+    z-index: 2;
     display: inline-block;
     padding: 21px 101px 19px 25px;
     border: none;

@@ -2,18 +2,20 @@
   display: flex;
   justify-content: center;
   margin-bottom: 74px;
-  overflow-x: auto;
+
 
   @include r(576) {
     justify-content: flex-start;
-    margin-bottom: 50px;
+    max-width: 86%;
+    overflow-x: auto;
+    margin: 0 auto 35px;
   }
   &__item {
     &:not(:last-child) {
       margin-right: 30px;
 
       @include r(576) {
-        margin-right: 15px;
+        margin-right: 20px;
       }
     }
   }
@@ -21,6 +23,7 @@
   &__btn {
     border: none;
     padding: 0;
+    white-space: nowrap;
     font-family: $dmFont;
     font-size: 16px;
     font-weight: 700;

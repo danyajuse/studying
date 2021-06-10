@@ -40,7 +40,7 @@ body {
   font-size: 36px;
   font-weight: 700;
   line-height: normal;
-  color: #191919;
+  color: $black-300;
   @include line-clamp(3);
 
   @include r(992) {
@@ -55,7 +55,7 @@ body {
 .button {
   border: none;
   background-color: $gray-300;
-  color: #ffffff;
+  color: $white-400;
   transition: background-color 0.5s ease, color 0.5s ease;
 }
 
@@ -67,3 +67,30 @@ body {
   border-radius: 50%;
 }
 
+.filter-title {
+  position: relative;
+  display: inline-block;
+  font-family: $dmFont;
+  font-size: 18px;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: $blue-600;
+
+  &::after {
+    content: '';
+    position: absolute;
+    right: -56px;
+    top: 9px;
+    height: 3px;
+    width: 39px;
+    background-color: $gray-300;
+  }
+}
+
+.checkbox-hidden {
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  position: absolute;
+}

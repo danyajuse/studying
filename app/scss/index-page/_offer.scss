@@ -35,7 +35,7 @@
 
     @include r(768) {
       padding: 20px 0 23px;
-      padding-left: 19px;
+      padding-left: 48px;
     }
 
     @include r(576) {
@@ -91,14 +91,14 @@
       }
 
       @include r(768) {
-        display: none;
+        width: 44px;
+        height: 44px;
+        left: 2px;
       }
 
       @include r(576) {
         display: block;
-        left: 11px;
-        width: 44px;
-        height: 44px;
+        left: 4px;
       }
     }
 

@@ -11,6 +11,14 @@
   @include r(992) {
     max-width: 350px;
   }
+  
+  @include r(768) {
+    max-width: 260px;
+  }
+
+  @include r(576) {
+    max-width: 350px;
+  }
 
   &__wrapper {
     position: relative;
@@ -20,12 +28,24 @@
     @include r(1200) {
       margin-bottom: 25px;
     }
+
+    @include r(768) {
+      height: 160px;
+    }
+
+    @include r(576) {
+      height: 250px;
+    }
   }
 
   &__img {
+    width: 100%;
+    height: auto;
+    max-height:100%;
+    object-fit: cover;
+
     @include r(1200) {
       height: 100%;
-      width: 100%;
     }
   }
 
@@ -52,8 +72,9 @@
 
   &__link {
     transition: color 0.5s ease;
+
     &:hover {
-      color: $blue-500;
+      color: $gray-300;
     }
   }
 
@@ -86,6 +107,14 @@
     line-height: 1.4;
     @include line-clamp(1);
 
+    @include r(768) {
+      padding-left: 10px;
+    }
+
+    @include r(576) {
+      padding-left: 30px;
+    }
+
     &::before {
       content: "";
       position: absolute;
@@ -94,7 +123,7 @@
       height: 1px;
       top: 13px;
 
-      @include r(786) {
+      @include r(768) {
         right: 15px;
       }
     }

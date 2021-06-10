@@ -1,41 +1,27 @@
-<!DOCTYPE html>
-<html lang="en">
+@@include('./parts/components/_top-page.html', {
+"title": "Glee"
+})
+@@include('./parts/components/_header.html')
 
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="icon" href="./images/content/icons/fav.ico" type="image/x-icon">
-  <link rel="shortcut icon" href="./images/content/icons/fav.ico" type="image/x-icon">
-  <link rel="stylesheet" href="css/style.min.css" type="text/css">
-  <title>Glee.</title>
-</head>
+<main>
+  <h1 class="sr-only">Furniture store Glee</h1>
 
-<body>
-  @@include('./parts/_header.html')
+  @@include('./parts/index-page/_trending.html')
 
-  <main>
-    <h1 class="sr-only">Furniture store Glee</h1>
+  @@include('./parts/index-page/_offer.html')
 
-    @@include('./parts/_trending.html')
+  @@include('./parts/index-page/_weak-products.html')
 
-    @@include('./parts/_offer.html')
+  @@include('./parts/index-page/_design-products.html')
 
-    @@include('./parts/_weak-products.html')
+  @@include('./parts/index-page/_video-promo.html')
 
-    @@include('./parts/_design-products.html')
+  @@include('./parts/components/_insights.html')
 
-    @@include('./parts/_video-promo.html')
-  
-    @@include('./parts/_insights.html')
+  @@include('./parts/components/_partners.html')
 
-    @@include('./parts/_partners.html')
+</main>
 
-  </main>
+@@include('./parts/components/_footer.html')
 
-  @@include('./parts/_footer.html')
-
-  <script src="/js/main.min.js"></script>
-</body>
-
-</html>
+@@include('./parts/components/_bottom-page.html')
