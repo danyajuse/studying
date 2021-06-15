@@ -7,6 +7,10 @@ body {
   background-color: #ffffff;
 }
 
+.modal-open {
+  overflow-y: hidden;
+}
+
 .container {
   max-width: 1800px;
   padding: 0 15px;
@@ -65,26 +69,6 @@ body {
   justify-content: center;
   border: none;
   border-radius: 50%;
-}
-
-.filter-title {
-  position: relative;
-  display: inline-block;
-  font-family: $dmFont;
-  font-size: 18px;
-  font-weight: 700;
-  text-transform: uppercase;
-  color: $blue-600;
-
-  &::after {
-    content: '';
-    position: absolute;
-    right: -56px;
-    top: 9px;
-    height: 3px;
-    width: 39px;
-    background-color: $gray-300;
-  }
 }
 
 .checkbox-hidden {

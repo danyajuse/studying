@@ -1,0 +1,144 @@
+.filter {
+  margin-bottom: 50px;
+
+  @include r($lapt) {
+    width: 100%;
+  }
+
+  &__title {
+    position: relative;
+    display: inline-block;
+    margin-bottom: 25px;
+    font-family: $dmFont;
+    font-size: 18px;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: $blue-600;
+// не ограничивал, т.к. ломатается линия
+
+    &::after {
+      content: "";
+      position: absolute;
+      right: -56px;
+      top: 9px;
+      height: 3px;
+      width: 39px;
+      background-color: $gray-300;
+    }
+  }
+
+  &__form {
+    font-family: $rubikFont;
+    font-size: 16px;
+    line-height: 2.7;
+  }
+
+  &__label {
+    cursor: pointer;
+  }
+
+  &__input {
+    &:checked + .filter__checkbox {
+      background-color: $gray-100;
+      color: $blue-600;
+      
+      @include r($lapt) {
+        background-color: $gray-250;
+      }
+    
+    }
+  }
+
+  &__name {
+    color: $blue-600;
+
+    @include overflow(190px);
+  }
+
+  &__checkbox {
+    z-index: 200;
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    padding: 0 20px 0 17px;
+    border-radius: 6px;
+    color: $gray-200;
+    transition: background-color 0.5s ease, color 0.5s ease;
+
+    &:hover {
+      background-color: $gray-50;
+      
+      @include r($lapt) {
+        background-color: $gray-100;
+      }
+    }
+  }
+
+  &--price {
+    padding-bottom: 22px;
+
+    .filter__title {
+      margin-bottom: 10px;
+    }
+
+    .filter__wrapper {
+      display: flex;
+      justify-content: space-between;
+      font-family: $rubikFont;
+      color: $blue-600;
+      line-height: 3;
+    }
+
+    .filter__min,
+    .filter__max {
+      display: inline-block;
+      transform: scaleY(1.2);
+    }
+
+    .filter__max {
+      padding-right: 5px;
+    }
+
+    .irs-line {
+      height: 3px;
+      background-color: $gray-250;
+    }
+
+    .irs-bar {
+      height: 4px;
+      background-color: $gray-300;
+    }
+
+    .irs-max,
+    .irs-min,
+    .irs-to,
+    .irs-from {
+      display: none;
+    }
+
+    .irs--flat .irs-handle {
+      top: 20px;
+      width: 15px;
+      height: 15px;
+      background-color: $gray-300;
+    }
+    .irs-handle > i:first-child {
+      display: none;
+    }
+  }
+
+  &--category {
+    .filter__checkbox {
+      &::after {
+        content: "";
+        position: absolute;
+        right: 16px;
+        top: 13px;
+        background-image: url("../images/sprite.svg#productarrow");
+        background-repeat: no-repeat;
+        width: 13px;
+        height: 9px;
+      }
+    }
+  }
+}

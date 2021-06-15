@@ -22,6 +22,7 @@
 
     @include r($desk) {
       justify-content: center;
+      margin: 0;
     }
 
     @include r($lapt) {

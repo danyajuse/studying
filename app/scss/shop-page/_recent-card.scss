@@ -1,0 +1,47 @@
+.recent-card {
+  color: $black-250;
+  transition: background-color 0.5s ease;
+  
+  &:hover {
+    background-color: $gray-100;
+  }
+
+  &__wrapper {
+    height: 66px;
+    width: 66px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: $white-300;
+    box-shadow: 0 0 2px 2px $gray-150;
+  }
+
+  &__descr {
+    padding-left: 23px;
+  }
+
+  &__subtitle {
+    display: inline-block;
+    font-weight: 400;
+    margin-bottom: 5px;
+
+    @include overflow(165px);
+  }
+
+  .jq-ry-group-wrapper {
+    margin-left: -8px;
+    margin-bottom: 7px;
+  }
+
+  &__price {
+    display: inline-block;
+    font-size: 15px;
+    line-height: 1.6;
+
+    @include overflow(100px);
+  }
+
+  &__link {
+    display: flex;
+  }
+}

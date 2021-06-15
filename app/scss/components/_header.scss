@@ -3,7 +3,7 @@
   z-index: 10;
   left: 0;
   right: 0;
-  padding: 47px 0 0;
+  padding: 45px 0 0;
   font-size: 15px;
   font-weight: 500;
   color: $blue-800;
@@ -73,6 +73,7 @@
   &__btn {
     display: none;
     height: 44px;
+    transition: transform 0.4s ease;
 
     @include r($lapt) {
       display: block;
@@ -87,7 +88,6 @@
 
     &--active {
       transform: rotate(90deg);
-      transition: transform 0.4s ease;
     }
 
     svg {
@@ -106,7 +106,7 @@
       position: absolute;
       right: -25px;
       left: -25px;
-      top: 0;
+      top: -24px;
       display: block;
       padding: 75px 0 10px;
       text-align: center;
@@ -115,7 +115,7 @@
       transition: transform 0.7s ease;
 
       &.menu__list--active {
-        transform: translateY(-9%);
+        transform: translateY(0%);
       }
 
       &.menu__list--active .menu__btn svg {
@@ -125,6 +125,27 @@
   }
 
   &__item {
+    &:nth-child(1),
+    &:nth-child(4) {
+      position: relative;
+
+      &:hover {
+        & .menu__link,
+        .plus {
+          color: $gray-300;
+
+          @include r($lapt) {
+            color: inherit;
+          }
+        }
+        & .sub-menu {
+          visibility: visible;
+          opacity: 1;
+          transform: scale(1);
+        }
+      }
+    }
+
     &:not(:last-child) {
       margin-right: 36px;
 
@@ -201,7 +222,7 @@
 
     &:focus {
       outline: transparent;
-      box-shadow: 0 0 5px $blue-500;
+      box-shadow:  0 0 5px $blue-500;
 
       @include r($mob) {
         box-shadow: none;
@@ -231,9 +252,10 @@
     }
   }
 
-  &__icon {
+  &__button-icon {
     position: relative;
     display: inline-block;
+    border: none;
     background-color: $orange-300;
     fill: $blue-600;
     transition: background-color 0.5s ease, fill 0.5s ease;
@@ -258,7 +280,7 @@
 
     &:focus {
       outline: transparent;
-      box-shadow: 0 0 5px $blue-500;
+      box-shadow: inset 0 0 5px $blue-500;
 
       @include r($mob) {
         box-shadow: none;

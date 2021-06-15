@@ -28,12 +28,15 @@
       @include r($lapt) {
         padding-left: 0;
         max-width: 300px;
+        width: 180px;
       }
 
-      @include r($tabl) {
+      @include r($mob) {
         padding-left: 22px;
         max-width: 370px;
+        width: 215px;
       }
+
     }
 
     .advertising-card__wrapper {
@@ -43,6 +46,11 @@
 
       @include r($tabl) {
         width: 150px;
+        padding-right: 21px;
+      }
+
+      @include r($mob) {
+        width: 117px;
       }
     }
   }
@@ -70,8 +78,13 @@
 
     @include r($tabl) {
       position: static;
-      display: block;
-      width: 144px;
+      display: block; 
+      width: 165px;  
+      padding-right: 18px;
+    }
+
+    @include r($mob) {
+      width: 95px;
     }
   }
 
@@ -111,11 +124,12 @@
 
     @include r($tabl) {
       max-width: 370px;
+      width: 229px;
       padding-left: 15px;
     }
 
     @include r($mob) {
-      max-width: 215px;
+      max-width: 191px;
     }
   }
 

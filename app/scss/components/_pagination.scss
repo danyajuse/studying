@@ -11,7 +11,8 @@
   }
 
   &__link,
-  &__next {
+  &__next,
+  span {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -31,7 +32,8 @@
     width: 74px;
   }
 
-  &.pagination--list {
+  &--list {
     justify-content: flex-start;
+    padding-left: 30px;
   }
 }

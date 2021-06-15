@@ -1,0 +1,27 @@
+.breadcrumbs {
+  display: flex;
+  color: $gray-550;
+  line-height: 1.7;
+
+  &__item {
+    position: relative;
+
+    &:not(:last-child) {
+      margin-right: 22px;
+
+      &::after {
+        content: "/";
+        position: absolute;
+        right: -15px;
+      }
+    }
+  }
+
+  &__link {
+    transition: color 0.5s ease;
+    
+    &:hover {
+      color: $gray-300;
+    }
+  }
+}

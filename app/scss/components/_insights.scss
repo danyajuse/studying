@@ -31,6 +31,10 @@
 
   &__title {
     text-align: start;
+
+    @include r($mob) {
+      max-width: 240px;
+    }
   }
 
   &__link {

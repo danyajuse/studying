@@ -1,0 +1,44 @@
+.view {
+  position: absolute;
+  top: -50px;
+  right: 0;
+  display: flex;
+  align-items: center;
+  font-size: 16px;
+  line-height: 1;
+  color: $blue-500;
+
+  @include r($desk) {
+    right: 92px;
+  }
+
+  @include r($tabl) {
+    display: none;
+  }
+
+  &__item {
+    &:not(:last-child) {
+      margin-right: 15px;
+    }
+  }
+
+  &__button {
+    background-color: transparent;
+    border: none;
+    padding: 0;
+    fill: $gray-300;
+    transition: fill 0.5s ease;
+
+    &:hover {
+      fill: $gray-450;
+    }
+
+    &--active {
+      fill: $blue-600;
+
+      &:hover {
+        fill: $blue-600;
+      }
+    }
+  }
+}

@@ -6,13 +6,16 @@
 
   <main>
     @@include('./parts/components/_headline.html', {
+      "title": "Product list 1",
       "parent": "Home",
       "first-child": "Product list 1"
     })
 
-    @@include('./parts/shop-page/_product-shop.html')
-
-
+    @@include('./parts/shop-page/_product-shop-top.html') 
+    @@include('./parts/shop-page/_product-shop-filters.html') 
+    @@include('./parts/shop-page/_product-shop-content.html') 
+    @@include('./parts/shop-page/_product-shop-bottom.html') 
+    
     @@include('./parts/components/_partners.html')
 
   </main>
