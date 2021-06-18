@@ -1,0 +1,27 @@
+@@include('./parts/components/_top-page.html', {
+"title": "About Us"
+})
+@@include('./parts/components/_header.html')
+
+<main>
+  @@include('./parts/components/_headline.html', {
+  "title": "About Us",
+  "parent": "Home",
+  "first-child": "About Us"
+  })
+
+  @@include('./parts/about-page/_experience.html')
+
+  @@include('./parts/about-page/_statistic.html')
+
+  @@include('./parts/about-page/_team.html')
+
+  @@include('./parts/components/_insights.html')
+
+  @@include('./parts/components/_partners.html')
+
+</main>
+
+@@include('./parts/components/_footer.html')
+
+@@include('./parts/components/_bottom-page.html')

@@ -1,0 +1,96 @@
+.team {
+  .container {
+    display: flex;
+
+    @include r($lapt) {
+      flex-direction: column;
+      align-items: center;
+    }
+  }
+
+  &__title {
+    text-align: start;
+    margin-bottom: 18px;
+  }
+
+  &__description {
+    max-width: 300px;
+    margin-right: 100px;
+
+    @include r($desk) {
+      margin-right: 30px;
+    }
+
+    @include r($lapt) {
+      max-width: 700px;
+      margin-right: 0;
+      margin-bottom: 60px;
+    }
+
+    @include r($mob) {
+      margin-bottom: 35px;
+    }
+  }
+
+  &__text {
+    margin-bottom: 32px;
+    font-size: 16px;
+    line-height: 1.9;
+
+    @include line-clamp(15);
+  }
+
+  &__button {
+    position: relative;
+    display: inline-block;
+    padding: 16px 58px 13px 18px;
+    border-radius: 6px;
+    font-family: $popFont;
+    font-size: 15px;
+    font-weight: 600;
+
+    &:hover {
+      background-color: $gray-150;
+      color: $blue-600;
+
+      svg {
+        fill: $blue-600;
+      }
+    }
+
+    &:focus {
+      outline: transparent;
+      box-shadow: 0 0 5px $blue-500;
+    }
+
+    &:active {
+      background-color: $gray-400;
+    }
+
+    svg {
+      position: absolute;
+      right: 21px;
+      top: 20px;
+      fill: $white-400;
+      transition: fill 0.5s ease;
+    }
+  }
+
+  &__list {
+    max-width: 770px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 30px;
+    row-gap: 42px;
+
+    @include r($tabl) {
+      column-gap: 15px;
+      row-gap: 20px;
+    }
+
+    @include r($mob) {
+      grid-template-columns: 1fr;
+      row-gap: 30px;
+    }
+  }
+}
