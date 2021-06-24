@@ -1,0 +1,107 @@
+.comment-card {
+  display: flex;
+
+  &--reply {
+    border-top: 1px solid $gray-25;
+    border-bottom: 1px solid $gray-25;
+    padding-top: 25px;
+    padding-bottom: 25px;
+    max-width: 695px;
+    margin-left: auto;
+
+    @include r($desk) {
+      max-width: 93%;
+    }
+  }
+
+  &__wrapper {
+    width: 100px;
+    height: 100px;
+
+    @include r($mob) {
+      width: 60px;
+      height: 60px;
+    }
+  }
+
+  &__image {
+    height: 100%;
+  }
+
+  &__inner {
+    padding-left: 36px;
+
+    @include r($deskLarge) {
+      padding-left: 25px;
+    }
+
+    @include r($tabl) {
+      padding-left: 15px;
+    }
+  }
+
+  &__top {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 16px;
+
+    @include r($tabl) {
+      margin-bottom: 10px;
+    }
+  }
+
+  &__name {
+    color: $blue-800;
+    font-size: 16px;
+    transition: color 0.5s ease;
+
+    @include line-clamp(2);
+
+    &:hover {
+      color: $gray-250;
+    }
+
+    &:active {
+      color: $blue-500;
+    }
+  }
+
+  &__date {
+    color: $gray-325;
+  }
+
+  &__text {
+    margin-bottom: 19px;
+    font-size: 16px;
+    line-height: 1.8;
+    color: $blue-700;
+
+    @include line-clamp(16);
+
+    @include r($tabl) {
+      margin-bottom: 15px;
+    }
+  }
+
+  &__reply {
+    position: relative;
+    color: $blue-650;
+    transition: color 0.5s ease;
+
+    &:hover {
+      color: $gray-300;
+
+      svg {
+        fill: $gray-300;
+      }
+    }
+
+    svg {
+      position: absolute;
+      right: -17px;
+      bottom: 1px;
+      fill: $blue-650;
+      transition: fill 0.5s ease;
+    }
+  }
+}

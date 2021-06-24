@@ -1,107 +1,59 @@
 .statistic {
-  padding-top: 122px;
-  padding-bottom: 118px;
   font-family: $dmFont;
   font-weight: 700;
   color: $blue-600;
+  background-color: $orange-300;
 
-  @include r($tabl) {
-    padding-top: 60px;
-    padding-bottom: 60px;
+  @include r($lapt) {
+    padding-top: 30px;
+    padding-bottom: 30px;
   }
 
-  &__inner {
-    background-color: $orange-300;
+  @include r($tabl) {
+    padding-top: 50px;
+    padding-bottom: 50px;
   }
 
   &__list {
     display: flex;
     justify-content: space-around;
-    align-items: center;
-    height: 321px;
-    min-height: 280px;
-    padding-top: 78px;
+    padding-top: 90px;
+    padding-bottom: 77px;
 
     @include r($lapt) {
-      justify-content: space-between;
-    }
-
-    @include r($tabl) {
       justify-content: center;
       flex-wrap: wrap;
-      height: 350px;
-    }
-
-    @include r($mob) {
-      flex-wrap: nowrap;
-      align-items: flex-start;
-      flex-direction: column;
-      padding-top: 0;
+      padding: 0;
     }
   }
 
   &__item {
     position: relative;
-    font-size: 18px;
+    max-width: 290px;
     width: 100%;
+    font-size: 18px;
     text-align: center;
 
+    @include line-clamp(4);
+
     @include r($lapt) {
-      max-width: 150px;
+      font-size: 17px;
     }
 
     @include r($tabl) {
-      max-width: 225px;
-      margin-bottom: 100px;
+      width: calc(50% - 30px);
     }
 
-    @include r($mob) {
-      max-width: 100%;
-      width: 100%;
-      margin-bottom: 10px;
-      padding-left: 70px;
-      text-align: start;
+    &:nth-child(1), &:nth-child(2) {
+      margin-bottom: 30px;
     }
 
-    &::before {
-      content: "";
-      position: absolute;
-      top: -77px;
-      left: 36%;
-      height: 73px;
-      width: 73px;
-      background-repeat: no-repeat;
-
-      @include r($lapt) {
-        left: 29%;
-      }
-
-      @include r($tabl) {
-        left: 34%;
-      }
-
-      @include r($mob) {
-        left: 0;
-        top: 0;
-        height: 60px;
-        width: 60px;
-      }
+    &:nth-child(odd) {
+      margin-right: 30px;
     }
-
-    &--rate::before {
-      background-image: url("../../images/sprite.svg#rate");
-    }
-
-    &--delivered::before {
-      background-image: url("../../images/sprite.svg#delivered");
-    }
-
-    &--time::before {
-      background-image: url("../../images/sprite.svg#time");
-    }
-
-    &--brands::before {
-      background-image: url("../../images/sprite.svg#brands");
+ 
+    svg {
+      fill: $blue-600;
     }
 
     span {
@@ -109,15 +61,32 @@
       margin-bottom: 8px;
       text-align: center;
       font-size: 36px;
-      @include line-clamp(2);
-
-      @include r($lapt) {
-        font-size: 32px;
-      }
 
       @include r($mob) {
-        text-align: start;
+        font-size: 31px;
       }
+    }
+  }
+
+  &__wrapper {
+    position: relative;
+    width: 80px;
+    height: 66px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    &::after {
+      content: "";
+      position: absolute;
+      height: 33px;
+      width: 33px;
+      right: 3px;
+      bottom: 2px;
+      opacity: 0.5;
+      background-color: $gray-300;
+      border-radius: 50%;
     }
   }
 }

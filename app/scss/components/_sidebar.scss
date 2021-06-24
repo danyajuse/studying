@@ -1,0 +1,111 @@
+.sidebar {
+  max-width: 270px;
+  width: 100%;
+
+  @include r($lapt) {
+    position: fixed;
+    right: -100%;
+    z-index: 100;
+    top: 0;
+    bottom: 0;
+    margin-right: 0;
+    opacity: 1;
+    visibility: visible;
+    max-width: 70%;
+    padding: 20px;
+    overflow-y: scroll;
+    background-color: $gray-100;
+    transition: right 0.5s ease;
+  }
+
+  @include r($mob) {
+    max-width: 100%;
+  }
+
+  &--active {
+    @include r($lapt) {
+      right: 0;
+    }
+  }
+
+  &__form {
+    position: relative;
+    margin-bottom: 55px;
+  }
+
+  &__input {
+    width: 100%;   
+    padding: 10px 15px 9px 15px;
+    border: 2px solid $gray-100;
+    border-radius: 6px;
+    outline: transparent;
+    background-color: transparent;
+    transition: background-color 0.5s ease;
+    
+    @include r($lapt) {
+      border-color: $gray-250;
+    }
+
+    &:hover {
+      background-color: $gray-50;
+    }
+
+    &:focus {
+      box-shadow: 0 0 2px $blue-500;
+    }
+  }
+
+  &__button {
+    position: absolute;
+    right: 0;
+    top: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 12px 14px 12px 15px;
+    border: none;
+    border-radius: 6px;
+    transition: background-color 0.5s ease;
+    background-color: $gray-100;
+
+    @include r($lapt) {
+      background-color: $gray-250;
+    }
+
+    &:hover {
+      background-color: $gray-150;
+
+      @include r($lapt) {
+        background-color: $gray-250;
+      }
+
+      svg {
+        fill: $white-400;
+      }
+    }
+
+    svg {
+      fill: $blue-550;
+      transition: fill 0.5s ease;
+
+      
+      @include r($lapt) {
+        fill: $white-400;
+      }
+    }
+  }
+
+  &__item {
+    &:not(:last-child) {
+      margin-bottom: 24px;
+    }
+  }
+
+  .filter {
+    margin-bottom: 36px;
+
+    &__title {
+      margin-bottom: 27px;
+    }
+  }
+}

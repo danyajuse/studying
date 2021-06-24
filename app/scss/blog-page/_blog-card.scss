@@ -1,0 +1,126 @@
+.blog-card {
+  
+  &__image {
+    @include r($mob) {
+      height: 285px;
+      object-fit: cover;
+    }
+  }
+
+  &__add {
+    position: relative;
+    z-index: 2;
+    max-width: 275px;
+    padding: 25px 0 25px 19px;
+    margin-top: -74px;
+    margin-bottom: 33px;
+    font-size: 13px;
+    text-transform: uppercase;
+    background-color: $gray-300;
+    color: $white-400;
+
+    @include r($mob) {
+      margin-top: -53px;
+      margin-bottom: 25px;
+      padding: 15px;
+    }
+
+    svg {
+      fill: $white-400;
+      transition: fill 0.5s ease;
+    }
+  }
+
+  &__date {
+    margin-right: 20px;
+  }
+
+  &__link {
+    transition: color 0.5s ease;
+
+    &:hover {
+      color: $black-250;
+
+      svg {
+        fill: $black-250;
+      }
+    }
+  }
+
+  &__title {
+    margin-bottom: 18px;
+    font-size: 36px;
+    font-weight: 400;
+
+    @include line-clamp(4);
+
+    @include r($desk) {
+      font-size: 34px;
+    }
+
+    @include r($lapt) {
+      font-size: 32px;
+    }
+
+    @include r($tabl) {
+      font-size: 30px;
+    }
+
+    @include r($mob) {
+      font-size: 26px;
+    }
+  }
+
+  &__text {
+    margin-bottom: 35px;
+    line-height: 1.8;
+    font-size: 16px;
+
+    @include line-clamp(10);
+
+    @include r($mob) {
+      margin-bottom: 20px;
+    }
+  }
+
+  &__link-btn {
+    position: relative;
+    display: inline-block;
+    padding: 19px 87px 19px 23px;
+    background-color: transparent;
+    border: 1px solid $gray-300;
+    color: $gray-300;
+    font-family: $dmFont;
+    transition: background-color 0.5s ease, color 0.5s ease;
+
+    @include r($mob) {
+      padding: 15px 65px 15px 15px;
+    }
+
+    &:hover {
+      background-color: $gray-300;
+      color: $blue-700;
+
+      svg {
+        fill: $blue-700;
+      }
+    }
+
+    &:focus {
+      outline: transparent;
+      box-shadow: 0 0 3px $blue-500;
+    }
+
+    svg {
+      position: absolute;
+      right: 17px;
+      bottom: 22px;
+      fill: $gray-300;
+      transition: fill 0.5s ease;
+
+      @include r($mob) {
+        bottom: 19px;
+      }
+    }
+  }
+}

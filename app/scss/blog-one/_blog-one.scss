@@ -1,0 +1,202 @@
+.blog-one {
+  padding-top: 120px;
+  padding-bottom: 127px;
+
+  @include r($desk) {
+    padding-top: 110px;
+    padding-bottom: 110px;
+  }
+
+  @include r($lapt) {
+    padding-top: 85px;
+    padding-bottom: 85px;
+  }
+
+  @include r($tabl) {
+    padding-top: 75px;
+    padding-bottom: 75px;
+  }
+
+  @include r($mob) {
+    padding-top: 60px;
+    padding-bottom: 60px;
+  }
+
+  &__wrapper {
+    display: flex;
+    justify-content: space-between;
+
+    @include r($desk) {
+      justify-content: flex-start;
+    }
+
+    @include r($lapt) {
+      justify-content: center;
+    }
+  }
+
+  &__content {
+    max-width: 830px;
+
+    @include r($desk) {
+      margin-right: 30px;
+    }
+
+    @include r($lapt) {
+      margin-right: 0;
+    }
+  }
+
+  &__description {
+    margin-bottom: 58px;
+    font-size: 16px;
+    line-height: 1.8;
+    color: $blue-600;
+
+    @include r($deskLarge) {
+      margin-bottom: 40px;
+    }
+
+    @include r($desk) {
+      margin-bottom: 30px;
+    }
+
+    @include r($tabl) {
+      margin-bottom: 25px;
+    }
+
+    p {
+      @include line-clamp(25);
+    }
+
+    h3 {
+      margin-bottom: 13px;
+      font-weight: 500;
+
+      & + p {
+        color: $blue-700;
+
+        @include line-clamp(20);
+      }
+    }
+
+   
+
+    & > h2 {
+      margin-bottom: 10px;
+      font-size: 36px;
+      font-weight: 400;
+      line-height: 1.4;
+      color: $black-250;
+
+      @include line-clamp(3);
+
+      @include r($desk) {
+        font-size: 34px;
+      }
+
+      @include r($lapt) {
+        font-size: 32px;
+      }
+
+      @include r($tabl) {
+        font-size: 30px;
+      }
+
+      @include r($mob) {
+        font-size: 28px;
+      }
+
+      & + p {
+        margin-bottom: 17px;
+        font-weight: 500;
+
+        @include line-clamp(10);
+      }
+    }
+
+    blockquote {
+      padding: 16px 53px 15px 35px;
+      margin-bottom: 50px;
+      margin-top: 43px;
+      border-left: 7px solid $gray-300;
+      background-color: $gray-100;
+
+      @include r($desk) {
+        margin-bottom: 35px;
+        margin-top: 35px;
+      }
+
+      @include r($tabl) {
+        margin-bottom: 20px;
+        margin-top: 20px;
+      }
+
+      @include r($mob) {
+        padding: 15px 10px 15px 10px;
+      }
+
+      cite {
+        position: relative;
+        display: block;
+        padding-top: 8px;
+        padding-left: 45px;
+        font-style: normal;
+
+        @include line-clamp(2);
+
+        &::before {
+          content: "";
+          position: absolute;
+          bottom: 11px;
+          left: 4px;
+          width: 20px;
+          height: 3px;
+          background-color: $gray-300;
+        }
+      }
+    }
+
+    figure {
+      display: flex;
+      margin-bottom: 35px;
+
+      @include r($tabl) {
+        align-items: center;
+        margin-bottom: 10px;
+      }
+
+      @include r($mob) {
+        display: block;
+      }
+
+      div {
+        padding-top: 18px;
+        padding-left: 34px;
+
+        @include r($tabl) {
+          padding-top: 10px;
+          padding-left: 13px;
+        }
+
+        @include r($mob) {
+          padding-left: 0;
+        }
+
+        p {
+          @include line-clamp(15);
+        }
+      }
+
+      img {
+        max-width: 322px;
+        height: 211px;
+
+        @include r($mob) {
+          max-width: 100%;
+          height: auto;
+        }
+      }
+    }
+  }
+}

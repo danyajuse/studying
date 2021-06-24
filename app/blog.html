@@ -1,0 +1,25 @@
+@@include('./parts/components/_top-page.html', {
+"title": "Blog"
+})
+@@include('./parts/components/_header.html')
+
+<main>
+  @@include('./parts/components/_headline.html', {
+  "title": "Blog",
+  "parent": "Home",
+  "first-child": "Blog"
+  })
+
+  @@include('./parts/blog-page/_blog-top.html')
+
+  @@include('./parts/blog-page/_blog-content.html')
+  @@include('./parts/components/_sidebar.html')
+ 
+  @@include('./parts/blog-page/_blog-bottom.html')
+
+  @@include('./parts/components/_partners.html')
+</main>
+
+@@include('./parts/components/_footer.html')
+
+@@include('./parts/components/_bottom-page.html')

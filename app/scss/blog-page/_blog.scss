@@ -1,0 +1,80 @@
+.blog {
+  padding-top: 120px;
+  padding-bottom: 127px;
+
+  @include r($desk) {
+    padding-top: 110px;
+    padding-bottom: 110px;
+  }
+
+  @include r($lapt) {
+    padding-top: 85px;
+    padding-bottom: 85px;
+  }
+
+  @include r($tabl) {
+    padding-top: 75px;
+    padding-bottom: 75px;
+  }
+
+  @include r($mob) {
+    padding-top: 60px;
+    padding-bottom: 60px;
+  }
+
+  &__wrapper {
+    display: flex;
+    justify-content: space-between;
+
+    @include r($desk) {
+      justify-content: flex-start;
+    }
+
+    @include r($lapt) {
+      justify-content: center;
+    }
+  }
+
+  &__content {
+    max-width: 830px;
+
+    @include r($desk) {
+      margin-right: 30px;
+    }
+
+    @include r($lapt) {
+      margin-right: 0;
+    }
+
+    .pagination {
+      justify-content: flex-start;
+
+      span {
+        background-color: $gray-300;
+        color: $white-400;
+      }
+    }
+  }
+
+  &__list {
+    margin-bottom: 78px;
+
+    @include r($tabl) {
+      margin-bottom: 50px;
+    }
+
+    @include r($mob) {
+      margin-bottom: 35px;
+    }
+  }
+
+  &__item {
+    &:not(:last-child) {
+      margin-bottom: 51px;
+
+      @include r($mob) {
+        margin-bottom: 30px;
+      }
+    }
+  }
+}

@@ -19,19 +19,26 @@ $gray-550: #888c91;
 $gray-500: #585858;
 $gray-450: #8b8b8b;
 $gray-400: #a7b4bb;
+$gray-375: #666666;
 $gray-350: #7b7b7b;
+$gray-325: #9e9e9e;
 $gray-300: #a3bbc8;
 $gray-250: #c2d2db;
 $gray-200: #b8b8b8;
+$gray-175: #999999;
 $gray-150: #dae4e9;
+$gray-125: #a1a1a1;
 $gray-100: #edf1f4;
 $gray-75: #888888;
 $gray-50: #f9f9f9;
+$gray-25: #ebebeb;
 
 $blue-1000: #222933;
 $blue-800: #436372;
 $blue-700: #565872;
+$blue-650: #516278;
 $blue-600: #243f4d;
+$blue-550: #426c94;
 $blue-500: #234969;
 
 $white-400: #ffffff;
@@ -49,7 +56,10 @@ $mob: 576;
   -webkit-box-orient: vertical;
   overflow: hidden;
 }
-
+// display: -webkit-box;
+//   -webkit-line-clamp: 3;
+//   -webkit-box-orient: vertical;
+//   overflow: hidden;
 @mixin overflow($width) {
   max-width: $width;
   overflow: hidden;

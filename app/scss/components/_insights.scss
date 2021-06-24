@@ -10,15 +10,33 @@
     margin-bottom: -145px;
   }
 
+  @include r($lapt) {
+    padding-top: 60px;
+  }
+
   @include r($tabl) {
-    padding-top: 65px;
+    padding-top: 40px;
   }
   
   & + .partners {
-    padding-top: 190px;
+    padding-top: 190px; 
+
+      .partners__slider {
+        height: 253px;
+
+        @include r($lapt) {
+          height: 150px;
+        }
+      }
+    
+    
 
     @include r($lapt) {
-      padding-top: 110px;
+      padding-top: 170px;
+    }
+
+    @include r($mob) {
+      padding-top: 175px;
     }
   }
 

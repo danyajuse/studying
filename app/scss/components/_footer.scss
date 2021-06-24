@@ -31,7 +31,8 @@
     }
 
     @include r($mob) {
-      max-width: 80%;
+      justify-content: center;
+      text-align: center;
     }
   }
 
@@ -80,6 +81,10 @@
     max-width: 200px;
     line-height: 1.7;
     @include line-clamp(6);
+
+    @include r($mob) {
+      max-width: 100%;
+    }
 
     p:not(:last-child) {
       margin-bottom: 10px;
@@ -146,7 +151,7 @@
     }
   }
 
-  &__adress-text,
+  &__address-text,
   &__text {
     line-height: 1.5;
     @include line-clamp(4);
@@ -174,6 +179,7 @@
 
     @include r($mob) {
       flex-wrap: wrap;
+      justify-content: center;
       padding-top: 20px;
       padding-bottom: 25px;
     }
@@ -185,12 +191,12 @@
     @include line-clamp(3);
 
     @include r($tabl) {
-      max-width: 300px;
       line-height: 1.4;
     }
 
     @include r($mob) {
       order: 2;
+      text-align: center;
     }
   }
 

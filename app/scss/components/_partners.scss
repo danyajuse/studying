@@ -1,7 +1,8 @@
 
 .partners {
   background-color: $orange-200;
-  margin-bottom: 77px;
+  margin-bottom: 86px;
+  padding-top: 20px;
 
   @include r($tabl) {
     margin-bottom: 65px;
@@ -10,16 +11,15 @@
   &__slider {
     display: flex;
     align-items: center;
-    height: 250px;
+    height: 225px;
+
+    @include r($mob) {
+      height: 120px;
+    }
   }
 
   &__item {
-    width: 150px !important;
     height: 100px;
-
-    @include r($lapt) {
-      width: 100% !important;
-    }
   }
 
   .slick-slide {

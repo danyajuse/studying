@@ -1,5 +1,15 @@
 .team {
-  .container {
+  padding-top: 120px;
+
+  @include r($lapt) {
+    padding-top: 40px;
+  }
+
+  @include r($tabl) {
+    padding-top: 25px;
+  }
+
+  &__wrapper {
     display: flex;
 
     @include r($lapt) {
@@ -9,7 +19,7 @@
   }
 
   &__title {
-    text-align: start;
+    text-align: left;
     margin-bottom: 18px;
   }
 
@@ -40,7 +50,7 @@
     @include line-clamp(15);
   }
 
-  &__button {
+  &__link  {
     position: relative;
     display: inline-block;
     padding: 16px 58px 13px 18px;
@@ -93,4 +103,5 @@
       row-gap: 30px;
     }
   }
+
 }
